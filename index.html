@@ -3,13 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola Mundo EbookTesis</title>
+    <title>¿Cómo hacer una tesis con ChatGPT</title>
+    <meta name="description" content="Aprende cómo hacer una tesis usando ChatGPT. Desarrolla el 📁 marco teorico y otros componentes de investigacion. Descarga nuestro eBook especializado hoy mismo.">
+    <style>
+
+
+
+        @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap);
+        @import url(https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap);
+        @import url(https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap);
+        @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap);
+        @import url(https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400&display=swap);
+        @import url(https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap);
+        @import url(https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap);
+
+    /* Estilos para dispositivos móviles */
+    @media screen and (max-width: 768px) {
+        .book,
+        .pack_book {
+            width: 100% !important; /* Establece el ancho al 100% para ocupar toda la pantalla */
+            margin-bottom: 1em; /* Cambia el espacio entre los elementos */
+        }
+        .img_book {
+        height: auto; /* Hace que la altura del contenedor se ajuste automáticamente */
+        width: 100%; /* Establece el ancho del contenedor al 100% */
+    }
+    .img_book img {
+        width: 100%; /* Establece el ancho de la imagen al 100% del contenedor */
+        height: auto; /* Hace que la altura de la imagen se ajuste automáticamente */
+    }
+    }
+    
+        body {
+            font-family: 'Roboto Serif', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #396ea8;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .books-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .book {
+            width: 23%;
+            margin-bottom: 2em;
+            border: solid 1px rgb(195, 195, 195);
+            border-radius: 5px;
+            padding:5px;
+        }
+
+        .pack_book {
+            width: 50%;
+            margin-bottom: 2em;
+            margin:auto;
+            border: solid 1px rgb(195, 195, 195);
+            border-radius: 5px;
+            padding:5px;
+
+        }
+        button {
+            background-color: #405d7c;
+            color: #fff;
+            padding: 1em 2em;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width:100%
+        }
+
+        img {width:100%}
+
+        video {
+            width: 100%;
+            margin: auto; /* Centro el video */
+            text-align: center;
+            display: block; /* Quita el margen adicional */
+        }
+
+    .precio{
+      font-size: 24px;
+      text-align: center;
+      color: #ffffff; /* Amarillo oscuro */
+      font-family: 'Teko', sans-serif; /* Cambia la fuente según tus preferencias */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade sombra al texto */
+      margin-bottom: 20px;
+      background: linear-gradient(to right, rgb(123, 145, 100), rgb(74, 147, 62)); /* Gradiente horizontal de amarillo oscuro a amarillo claro */
+     border-radius: 5px;
+    }
+
+    .precio_tachado{
+      font-size: 24px;
+      text-align: center;
+      color: #ffbebe; /* Amarillo oscuro */
+      font-family: 'Teko', sans-serif; /* Cambia la fuente según tus preferencias */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade sombra al texto */
+      margin-bottom: 20px;
+      background: linear-gradient(to right, rgb(123, 145, 100), rgb(74, 147, 62)); /* Gradiente horizontal de amarillo oscuro a amarillo claro */
+     border-radius: 5px;
+     text-decoration: line-through;
+    }
+
+    h1 {text-align: center;}
+    h2, h3,h4, h5, p {text-align: justify;}
+
+
+    .iframe-container {
+            overflow: hidden;
+        }
+
+        .img_book {
+    border: solid 0px red;
+    overflow: hidden;
+    position: relative;
+    height: auto; /* Elimina la altura fija y permite que se ajuste automáticamente */
+}
+
+
+
+    .paginas {
+        border: solid 0px red;
+        position: absolute;
+        margin-top: 10px;
+        right: 0;
+        color: white;
+        background-color: rgb(255, 125, 125);
+        padding: 2px;
+    }
+
+    #descarga  {text-align: center;}
+
+    .nombre_ebook {border: solid 0px red; height:60px;
+        background-color: #405d7c;
+    color: white;
+    padding: 10px;
+    justify-content: center; /* Esto alinea horizontalmente el contenido */
+    display: flex;
+    align-items: center; /* Esto alinea verticalmente el contenido */
+    }
+
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Ebook Tesis: ¿Cómo hacer una tesis con ChatGPT?</h1>
+    </header>
+    <section id="section1" class="section">
+        <video width="360" height="340" controls>
+            <source src="tu_video.mp4" type="video/mp4">
+            Tu navegador no soporta el tag de video.
+        </video>
 
-    <h1>Hola Mundo EbookTesis</h1>
 
-    <p>¡Bienvenido al mundo de EbookTesis!</p>
+        <h2>¿Cansado de meses interminables de investigación y frustración sin poder terminar tu tesis? </h2>
+        <p>Entendemos perfectamente tu situación. Desarrollar una tesis puede ser un desafío abrumador, especialmente cuando es la primera vez que te enfrentas a un trabajo de investigación de esta magnitud. La falta de experiencia práctica puede convertir cada paso en un proceso de aprendizaje difícil y lento, ya que te encuentras construyendo no solo tu investigación, sino también tu conocimiento sobre cómo hacer una tesis.</p>
 
+        <p>La realidad es que una tesis está compuesta por múltiples partes y componentes, cada uno de los cuales requiere un enfoque específico y estratégico. Desde el 📁 Marco Introductorio hasta el 📁 Marco Analítico, cada etapa demanda un nivel de habilidad y comprensión que puede ser difícil de dominar cuando estás aprendiendo sobre la marcha.</p>
+
+        <p>Este desafío de aprender mientras avanzas con tu tesis puede generar una disonancia significativa en la eficiencia del proceso. Intentar obtener resultados mientras simultáneamente te enfrentas a la curva de aprendizaje de cómo hacer una tesis puede llevar a meses interminables de frustración y estancamiento.</p>
+    </section>
+    <section id="section2" class="section">
+
+        <h2>"Simplifica tu proceso de investigación y tesis con nuestra serie de libros especializados en el uso de ChatGPT y la estructura de la tesis".</h2>
+
+            <!-- Contenedor de libros -->
+        <div class="books-container">
+            <!-- Información del libro 1 -->
+            <div class="book">
+                <div class="nombre_ebook">Ebook: '¿Como hacer el Marco Referencial?'</div>
+                <div class="img_book">
+                    <span class="paginas">75 páginas</span>
+                    <img src="imagen_libro_1.png" alt="Libro 1">
+                </div>
+                    <p class="precio">Precio: U$17</p>
+                <button>Comprar Ahora</button>
+            </div>
+
+            <!-- Información del libro 2 -->
+            <div class="book">
+                <div class="nombre_ebook">Ebook: '¿Como hacer el Marco Introductorio?'</div>
+                <div class="img_book">
+                    <span class="paginas">38 páginas</span>
+                    <img src="imagen_libro_2.png" alt="Libro 2">
+                </div>
+                <p class="precio">Precio: U$11</p>
+                <button>Comprar Ahora</button>
+            </div>
+
+            <!-- Información del libro 3 -->
+            <div class="book">
+                <div class="nombre_ebook">Ebook: "¿Como hacer el Marco Analítico?"</div>
+                <div class="img_book">
+                    <span class="paginas">25 páginas</span>
+                    <img src="imagen_libro_3.png" alt="Libro 3">
+                </div>
+                <p class="precio">Precio: U$7</p>
+                <button>Comprar Ahora</button>
+            </div>
+
+            <!-- Información del libro 4 -->
+            <div class="book">
+                <div class="nombre_ebook">Ebook: '¿Como hacer el Marco Metodológico?'</div>
+                <div class="img_book">
+                    <span class="paginas">50 páginas</span>
+                    <img src="imagen_libro_4.png" alt="Libro 4">
+                </div>
+                <p class="precio">Precio: U$13</p>
+                <button>Comprar Ahora</button>
+            </div>
+        </div>
+
+
+                    <!-- Información pack de libros -->
+                    <div class="pack_book">
+                        <div class="nombre_ebook">Pack 4 Ebooks</div>
+                        <div class="img_book">
+                            <span class="paginas">188 páginas</span>
+                            <img src="pack_libros.png" alt="Libro 4">
+                        </div>
+                        <p class="precio_tachado">Precio: U$48</p>
+                        <p class="precio">Precio OFERTA: U$27</p>
+                        <button>Comprar Ahora</button>
+                    </div>
+                </div>
+
+        <p>Nuestra serie de libros está diseñada precisamente para proporcionarte la guía práctica que necesitas para superar estos obstáculos. Con nuestros recursos, podrás abordar cada parte de tu tesis con confianza y eficiencia, reduciendo así el tiempo y esfuerzo necesarios para completar tu trabajo. Además, nuestros libros incorporan una amplia variedad de prompts para usar con ChatGPT y otros motores de procesamiento de texto basados en Inteligencia Artificial, lo que te permitirá obtener ideas y sugerencias de manera rápida y efectiva para cada sección de tu tesis. Estos prompts te ayudarán a superar bloqueos creativos y a avanzar con fluidez en tu proceso de investigación y redacción.</p>
+
+    </section>
+    <section id="section3" class="section">
+
+        <h2>"Imagina haber tenido una guía paso a paso de apoyo desde el comienzo del proceso de investigación científica..."</h2>
+
+        <p>Esta serie de ebooks es exactamente eso, un aliado incondicional que te libera de las trabas del desconocimiento y te permite concentrarte en lo que realmente importa: tu investigación. No dejes que la falta de dirección detenga tu búsqueda del éxito académico. Con nuestros libros, por fin tendrás a tu disposición una guía experta para alcanzar tus objetivos y llevar a cabo tu tesis con total confianza y éxito.</p>
+
+        <h2>
+            ¡No pierdas más tiempo! 
+        </h2>
+
+        <p>
+            Únete a cientos de tesistas e investigadores que han transformado su viaje académico con nuestra serie de 4 libros. Rompe el ciclo de demoras y frustración. ¡Haz clic abajo y comienza tu viaje hacia una tesis exitosa ahora mismo!
+        </p>
+
+
+        <button id="scrollButton">Obtén tu Serie de Libros Ahora</button>
+    </section>
+    <section id="section4" class="section">
+        <h2 id="descarga">Descarga ahora nuestra plantilla gratuita</h2>
+        <p>¿Listo para dar el primer paso hacia el éxito en tu proyecto de investigación? ¡Estamos aquí para ayudarte! Con nuestra plantilla gratuita, recibirás un documento editable que te permitirá integrar rápidamente cada componente esencial de tu tesis o investigación científica. Esta plantilla está diseñada específicamente para facilitar el proceso de desarrollo de tu trabajo, proporcionándote la estructura necesaria para el 📁 Marco Introductorio, 📁 Marco Referencial, 📁 Marco Metodológico y 📁 Marco Analítico.</p>
+        <p>        
+        No más tiempo perdido tratando de crear una estructura desde cero o navegando por complejas convenciones de formato. Nuestra plantilla te brindará la guía necesaria para avanzar con confianza en cada etapa de tu tesis o investigación.
+        </p>
+        <p>Solo necesitas ingresar tu correo electrónico a continuación, y te enviaremos el enlace de descarga de inmediato. ¡No te pierdas esta oportunidad de simplificar tu proceso y aumentar tu productividad, comienza a dar forma a tu proyecto de investigación de manera profesional y efectiva!</p>
+
+        <!-- Aquí se crea el iframe -->
+        <div class="iframe-container">
+        <iframe src="https://gmail.us8.list-manage.com/subscribe?u=eb65ffc2402a44e72ffc39929&id=77294aaae1" width="100%" height="450" frameborder="0" allowfullscreen scrolling="no"></iframe>
+        </div>
+
+    <p>¡Descarga ahora y lleva tu investigación al siguiente nivel! ¡Gracias por confiar en nosotros para hacer que tu trabajo académico brille!</p>
+
+    </section>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const scrollButton = document.getElementById('scrollButton');
+        scrollButton.addEventListener('click', function() {
+            document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // También puedes hacer scroll suave con enlaces
+        const scrollLinks = document.querySelectorAll('.scroll-link');
+        scrollLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        });
+    </script>
 </body>
-</html>
