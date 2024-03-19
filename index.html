@@ -193,7 +193,9 @@
                     <img src="./assets/img/como_hacer_una_tesis_con_chatgpt_marco_referencial.png" alt="Libro 1">
                 </div>
                     <p class="precio">Precio: U$17</p>
-                <button>Comprar Ahora</button>
+                
+                <button class="botonCompra" data-url="https://bookworm043.gumroad.com/l/qerlgc">Comprar Ahora</button>
+
             </div>
 
             <!-- Información del libro 2 -->
@@ -204,7 +206,7 @@
                     <img src="./assets/img/como_hacer_una_tesis_con_chatgpt_marco_introductorio.png" alt="Libro 2">
                 </div>
                 <p class="precio">Precio: U$11</p>
-                <button>Comprar Ahora</button>
+                <button class="botonCompra" data-url="https://bookworm043.gumroad.com/l/nscqt">Comprar Ahora</button>
             </div>
 
             <!-- Información del libro 3 -->
@@ -215,7 +217,7 @@
                     <img src="./assets/img/como_hacer_una_tesis_con_chatgpt_marco_analitico.png" alt="Libro 3">
                 </div>
                 <p class="precio">Precio: U$7</p>
-                <button>Comprar Ahora</button>
+                <button class="botonCompra" data-url="https://bookworm043.gumroad.com/l/zmeug">Comprar Ahora</button>
             </div>
 
             <!-- Información del libro 4 -->
@@ -226,7 +228,7 @@
                     <img src="./assets/img/como_hacer_una_tesis_con_chatgpt_marco_metodologico.png" alt="Libro 4">
                 </div>
                 <p class="precio">Precio: U$13</p>
-                <button>Comprar Ahora</button>
+                <button class="botonCompra" data-url="https://bookworm043.gumroad.com/l/jeknb">Comprar Ahora</button>
             </div>
         </div>
 
@@ -240,7 +242,7 @@
                         </div>
                         <p class="precio_tachado">Precio: U$48</p>
                         <p class="precio">Precio OFERTA: U$27</p>
-                        <button>Comprar Ahora</button>
+                        <button class="botonCompra" data-url="https://bookworm043.gumroad.com/l/xkghhv">Comprar Ahora</button>
                     </div>
                 </div>
 
@@ -298,6 +300,23 @@
             document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
             });
         });
+        });
+
+         // Obtener todos los botones por su clase
+        var botones = document.querySelectorAll(".botonCompra");
+
+        // Función para abrir el URL correspondiente cuando se hace clic en un botón
+        function abrirURL(event) {
+        // Obtener la URL asociada al botón que se hizo clic
+        var url = event.target.getAttribute("data-url");
+        
+        // Abrir la URL en una nueva ventana
+        window.open(url);
+        }
+
+        // Agregar un evento de clic a cada botón para llamar a la función abrirURL
+        botones.forEach(function(boton) {
+        boton.addEventListener("click", abrirURL);
         });
     </script>
 </body>
