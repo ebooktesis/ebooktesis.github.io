@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Player</title>
+    <style>
+         #screen {background-color: rgb(147, 132, 242);
+            width: 360px;
+            height: 640;
+            overflow: hidden;
+        }
+        #texto {background-color: rgb(51, 123, 178);
+        color: white;
+    position: relative;
+    height: 1em;
+    margin-top: -1.1em;
+    padding: 10px;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+    #player {background-color: rgb(159, 242, 132);
+        position: relative;
+        
+    }
+    </style>
+</head>
+<body>
+    <div id="screen">
+    <div id="player"></div>
+    <div id="texto">ebooktesis.com/tv</div>
+    </div>
+
+    <script>
+        // Variable para almacenar los IDs de los videos
+        var videoIds = ['yNr7CN31tTY','9bF0_8d0BsU','sFwYyJbs-KQ','-WyhkwwWtcA','zzJvk9M3-ws','m7lWnEMJv-c','XB5u3bQr2yI','218TAFx0DmI','OVss5GpusJM','oE1vAIZkva0','_0Dzxf2Twqw','jriV0r-Fbvw','AWGzdiNx51Q','zMfauhWqsBs','3BbvZbT7WjY','eswRoKuLIyE','jUqYAiZXMGM','7vsddRdwNHw','oXKNUXCt3nA','kD5LukL9ZgU','8av-M7lMVYk','nO8kCZHRd5I','dPuuvBi8-tM']; // IDs de los videos en orden
+        
+        // Variable para almacenar el índice del video actual
+        var currentVideoIndex = 0;
+        
+        // Variable booleana para controlar la reproducción aleatoria
+        var randomOrder = false; // Cambia a true si deseas reproducir los videos en orden aleatorio
+
+        // Función para cargar el reproductor de YouTube
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '640',
+                width: '360',
+                videoId: getVideoId(), // Obtener el primer video
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+        
+        // Función que se llama cuando el reproductor está listo
+        function onPlayerReady(event) {
+            event.target.playVideo(); // Iniciar el video automáticamente cuando esté listo
+        }
+
+        // Función que se llama cuando el estado del reproductor cambia
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) { // Si el video termina
+                // Obtener el próximo video para reproducir
+                var nextVideoId = getVideoId();
+                // Cargar y reproducir el próximo video
+                player.loadVideoById(nextVideoId);
+                player.playVideo();
+            }
+        }
+
+        // Función para obtener el siguiente video
+        function getVideoId() {
+            if (randomOrder) { // Si la reproducción aleatoria está habilitada
+                return videoIds[Math.floor(Math.random() * videoIds.length)]; // Seleccionar un video aleatorio
+            } else {
+                var nextVideoIndex = (currentVideoIndex + 1) % videoIds.length; // Calcular el índice del próximo video
+                currentVideoIndex = nextVideoIndex; // Actualizar el índice del video actual
+                return videoIds[nextVideoIndex]; // Devolver el ID del próximo video en orden secuencial
+            }
+        }
+    </script>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
+
+
+
